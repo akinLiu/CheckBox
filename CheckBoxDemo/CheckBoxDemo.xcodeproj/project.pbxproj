@@ -21,6 +21,8 @@
 		E7A130201545991800600E26 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E7A1301E1545991800600E26 /* InfoPlist.strings */; };
 		E7A130231545991800600E26 /* CheckBoxDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A130221545991800600E26 /* CheckBoxDemoTests.m */; };
 		E7A1302E1545998A00600E26 /* AKCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A1302D1545998A00600E26 /* AKCheckBox.m */; };
+		E7A1303615459C2C00600E26 /* Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A1303415459C2C00600E26 /* Checkmark.png */; };
+		E7A1303715459C2C00600E26 /* CheckmarkEmpty.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A1303515459C2C00600E26 /* CheckmarkEmpty.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		E7A130221545991800600E26 /* CheckBoxDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckBoxDemoTests.m; sourceTree = "<group>"; };
 		E7A1302C1545998A00600E26 /* AKCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKCheckBox.h; path = ../../AKCheckBox/AKCheckBox.h; sourceTree = "<group>"; };
 		E7A1302D1545998A00600E26 /* AKCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKCheckBox.m; path = ../../AKCheckBox/AKCheckBox.m; sourceTree = "<group>"; };
+		E7A1303415459C2C00600E26 /* Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checkmark.png; sourceTree = "<group>"; };
+		E7A1303515459C2C00600E26 /* CheckmarkEmpty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CheckmarkEmpty.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 		E7A12FFD1545991700600E26 /* CheckBoxDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E7A1303315459C1C00600E26 /* UI */,
 				E7A130061545991700600E26 /* AppDelegate.h */,
 				E7A130071545991700600E26 /* AppDelegate.m */,
 				E7A130091545991700600E26 /* ViewController.h */,
@@ -154,6 +159,15 @@
 				E7A1301E1545991800600E26 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E7A1303315459C1C00600E26 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E7A1303415459C2C00600E26 /* Checkmark.png */,
+				E7A1303515459C2C00600E26 /* CheckmarkEmpty.png */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +243,8 @@
 			files = (
 				E7A130021545991700600E26 /* InfoPlist.strings in Resources */,
 				E7A1300E1545991700600E26 /* ViewController.xib in Resources */,
+				E7A1303615459C2C00600E26 /* Checkmark.png in Resources */,
+				E7A1303715459C2C00600E26 /* CheckmarkEmpty.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
