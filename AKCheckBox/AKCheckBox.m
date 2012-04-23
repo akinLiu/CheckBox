@@ -8,24 +8,52 @@
 
 #import "AKCheckBox.h"
 
+@interface AKCheckBox ()
+{
+  
+}
+
+- (void)updateImageWithState:(BOOL)checked;
+
+@end
+
 @implementation AKCheckBox
 
-- (id)initWithFrame:(CGRect)frame
+@synthesize checkBoxImageView = checkBoxImageView_;
+@synthesize titleLabel = titleLabel;
+
+- (id) initWithFrame:(CGRect)frame checked:(BOOL)aChecked
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
+  self = [super initWithFrame:frame];
+  if (self) {
+    self.checkBoxImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 0, 120, 50)];
+    [self addSubview:self.checkBoxImageView];
+    [self addSubview:self.titleLabel];
+    [self.titleLabel setBackgroundColor:[UIColor redColor]];
+    [self setBackgroundColor:[UIColor greenColor]];
+    [self addTarget:self action:@selector(updateImageWithState:) forControlEvents:UIControlEventTouchUpInside];
+    self.selected = aChecked;
+  }
+  return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+- (void)setTitleText:(NSString *)text
 {
-    // Drawing code
+  self.titleLabel.text = text;
 }
-*/
+
+- (void)updateImageWithState:(BOOL)checked
+{
+  self.selected = !self.selected;
+  if (checked) {
+    //    [self.checkBoxImageView setImage:@"checkedImg.png"];
+    NSLog(@"selected");
+  } else {
+    //    [self.checkBoxImageView setImage:[UIImageView]]
+    NSLog(@"not selected");
+  }
+}
+
 
 @end
