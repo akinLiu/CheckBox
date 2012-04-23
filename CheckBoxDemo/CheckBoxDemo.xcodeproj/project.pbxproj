@@ -20,6 +20,7 @@
 		E7A130181545991800600E26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7A12FF91545991700600E26 /* Foundation.framework */; };
 		E7A130201545991800600E26 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E7A1301E1545991800600E26 /* InfoPlist.strings */; };
 		E7A130231545991800600E26 /* CheckBoxDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A130221545991800600E26 /* CheckBoxDemoTests.m */; };
+		E7A1302E1545998A00600E26 /* AKCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = E7A1302D1545998A00600E26 /* AKCheckBox.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		E7A1301F1545991800600E26 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E7A130211545991800600E26 /* CheckBoxDemoTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckBoxDemoTests.h; sourceTree = "<group>"; };
 		E7A130221545991800600E26 /* CheckBoxDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckBoxDemoTests.m; sourceTree = "<group>"; };
+		E7A1302C1545998A00600E26 /* AKCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AKCheckBox.h; path = ../../AKCheckBox/AKCheckBox.h; sourceTree = "<group>"; };
+		E7A1302D1545998A00600E26 /* AKCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AKCheckBox.m; path = ../../AKCheckBox/AKCheckBox.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +119,8 @@
 				E7A130091545991700600E26 /* ViewController.h */,
 				E7A1300A1545991700600E26 /* ViewController.m */,
 				E7A1300C1545991700600E26 /* ViewController.xib */,
+				E7A1302C1545998A00600E26 /* AKCheckBox.h */,
+				E7A1302D1545998A00600E26 /* AKCheckBox.m */,
 				E7A12FFE1545991700600E26 /* Supporting Files */,
 			);
 			path = CheckBoxDemo;
@@ -261,6 +266,7 @@
 				E7A130041545991700600E26 /* main.m in Sources */,
 				E7A130081545991700600E26 /* AppDelegate.m in Sources */,
 				E7A1300B1545991700600E26 /* ViewController.m in Sources */,
+				E7A1302E1545998A00600E26 /* AKCheckBox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
