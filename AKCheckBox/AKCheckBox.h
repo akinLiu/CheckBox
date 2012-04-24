@@ -10,11 +10,10 @@
 
 @interface AKCheckBox : UIControl
 
-@property (nonatomic, strong, readwrite) UIImageView *checkBoxImageView;
+@property (nonatomic, strong, readwrite) UIImageView *checkboxImageView;
 @property (nonatomic, strong, readwrite) UILabel *titleLabel;
 
-- (id) initWithFrame:(CGRect)frame
-             checked:(BOOL)aChecked;
+- (void)setImage:(UIImage *)image forCheckState:(BOOL)isChecked;
 
 - (void)setTitleText:(NSString *)text;
 

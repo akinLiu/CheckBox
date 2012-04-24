@@ -13,27 +13,30 @@
   
 }
 
-- (void)updateImageWithState:(BOOL)checked;
+@property (nonatomic, strong, readwrite) UIImage *selectedImage;
+@property (nonatomic, strong, readwrite) UIImage *unSelectedImage;
+
+- (void)handleStateChanged;
 
 @end
 
 @implementation AKCheckBox
 
-@synthesize checkBoxImageView = checkBoxImageView_;
-@synthesize titleLabel = titleLabel;
+@synthesize checkboxImageView = checkboxImageView_;
+@synthesize titleLabel = titleLabel_;
+@synthesize selectedImage = selectedImage_;
+@synthesize unSelectedImage = unSelectedImage_;
 
-- (id) initWithFrame:(CGRect)frame checked:(BOOL)aChecked
+
+- (id)initWithFrame:(CGRect)frame
 {
   self = [super initWithFrame:frame];
   if (self) {
-    self.checkBoxImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    self.checkboxImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(50, 0, 120, 50)];
-    [self addSubview:self.checkBoxImageView];
+    [self addSubview:self.checkboxImageView];
     [self addSubview:self.titleLabel];
-    [self.titleLabel setBackgroundColor:[UIColor redColor]];
-    [self setBackgroundColor:[UIColor greenColor]];
-    [self addTarget:self action:@selector(updateImageWithState:) forControlEvents:UIControlEventTouchUpInside];
-    self.selected = aChecked;
+    [self addTarget:self action:@selector(handleStateChanged) forControlEvents:UIControlEventTouchUpInside];
   }
   return self;
 }
@@ -43,17 +46,26 @@
   self.titleLabel.text = text;
 }
 
-- (void)updateImageWithState:(BOOL)checked
+- (void)handleStateChanged
 {
-  self.selected = !self.selected;
-  if (checked) {
-    //    [self.checkBoxImageView setImage:@"checkedImg.png"];
+  self.selected = !self.isSelected;
+  if (self.isSelected) {
+    [self.checkboxImageView setImage:self.selectedImage];
     NSLog(@"selected");
+    
   } else {
-    //    [self.checkBoxImageView setImage:[UIImageView]]
-    NSLog(@"not selected");
+    [self.checkboxImageView setImage:self.unSelectedImage];
+    NSLog(@"Unselected");
   }
 }
 
+- (void)setImage:(UIImage *)image forCheckState:(BOOL)isChecked
+{
+  if (isChecked) {
+    self.selectedImage = image;
+  } else {
+    self.unSelectedImage = image;
+  }
+}
 
 @end
